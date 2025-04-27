@@ -18,19 +18,19 @@ function Banner() {
             
             <span className="text-blue-500 font-semibold text-4xl">
                 <Typewriter
-                    words={['React', "React Native ", 'Next.js', 'Node.js', 'MongoDB', 'TypeScript']}
+                    words={["HTML", "CSS"," JavaScript",'React', "React Native ", 'Next.js', 'Node.js', 'MongoDB', 'TypeScript',"Bootstrap", "Tailwind CSS"," Express.js", "Git", "shadcn/ui"]}
                     loop={0} // 0 = infinite
                     cursor
                     cursorStyle="|"
-                    typeSpeed={60}
+                    typeSpeed={10}
                     deleteSpeed={50}
                     delaySpeed={1000}   
                 />
             </span>
         </h2>
         <div className="flex flex-row items-center gap-5">
-            <Button variant="outline" className="bg-orange-400 text-white">Hire</Button>
-            <Button variant="outline" className="bg-blue-400 text-white">Download Resume</Button>
+            <Button variant="outline" className="bg-orange-400 text-white dark:bg-orange-400 dark:text-white">Hire</Button>
+            <Button variant="outline" className="bg-blue-400 text-white dark:bg-blue-400 dark:text-white">Download Resume</Button>
         </div>
 
     </div>

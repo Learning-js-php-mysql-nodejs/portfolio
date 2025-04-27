@@ -7,6 +7,9 @@ import ContactUs from '../ContactUs';
 import { Typewriter } from 'react-simple-typewriter';
 import Banner from '@/components/Banner';
 import Skill from '@/components/Skill';
+import Description from '@/components/Description';
+import ProjectSection from '@/components/ProjectSection';
+import MoreSkills from '@/components/MoreSkills';
 
 function Dashboard() {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -31,7 +34,7 @@ function Dashboard() {
     const tabs = ['Home', 'Projects', 'Contact Us'];
 
     return (
-        <div className="bg-white dark:bg-gray-900 min-h-screen transition-colors">
+        <div className="bg-white dark:bg-gray-900 min-h-screen transition-colors relative">
             {/* Header */}
             <header className="h-16 bg-white dark:bg-gray-800 shadow flex items-center justify-between px-6 sticky top-0 z-50 w-full transition-colors">
                 {/* Title */}
@@ -69,48 +72,19 @@ function Dashboard() {
                         {/* Carousel Section */}
                         <div className="grid grid-cols-1 justify-center mb-8">
                             <div className="col-span-1 w-full max-w-8xl mx-auto h-150">
-                                <Banner/>
+                                <Banner />
                             </div>
                         </div>
-
+                        {/* Description Section */}
+                        <Description />
                         {/* Stats Cards Section */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {/* Card 1 */}
-                            <Card className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors">
-                                <CardHeader>
-                                    <CardTitle>Users</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-2xl font-bold">1,245</p>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">Active users today</p>
-                                </CardContent>
-                            </Card>
 
-                            {/* Card 2 */}
-                            <Card className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors">
-                                <CardHeader>
-                                    <CardTitle>Sales</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-2xl font-bold">$12,345</p>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">Revenue this month</p>
-                                </CardContent>
-                            </Card>
-
-                            {/* Card 3 */}
-                            <Card className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors">
-                                <CardHeader>
-                                    <CardTitle>New Orders</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-2xl font-bold">320</p>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">Orders this week</p>
-                                </CardContent>
-                            </Card>
-                        </div>
                         {/* Skills Section */}
-<Skill/>
-
+                        <Skill />
+                        {/* Skills Section */}
+                        <MoreSkills />
+                        {/* project*/}
+                        <ProjectSection />
                     </>
                 )}
 
