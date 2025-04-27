@@ -9,9 +9,9 @@ function Banner() {
 
     <div className="flex flex-col items-center gap-10">
         <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            Software Developer
+           Virendra Uikey
             <h2 className="text-green-700 dark:text-gray-300 text-center text-sm mt-5 " >
-                Work Experiance More Then 2.5 Year
+             Work Experiance More Then 2.5 Year as Software Engineer
             </h2>
         </h1>
         <h2 className="text-gray-700 dark:text-gray-300 text-center text-2xl">

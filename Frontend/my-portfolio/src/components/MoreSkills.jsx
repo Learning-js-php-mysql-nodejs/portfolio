@@ -1,98 +1,115 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FaReact, FaHtml5, FaCss3Alt, FaJsSquare, FaNodeJs, FaDatabase } from 'react-icons/fa'; // Example icons
+import { FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaGit, FaGithub, FaGitlab, FaBootstrap } from "react-icons/fa";
+import { RiJavascriptFill, RiTailwindCssFill } from "react-icons/ri";
+import { BiLogoTypescript } from "react-icons/bi";
+import { SiExpress, SiMongodb, SiReactrouter, SiRedux, SiPostman, SiAxios, SiReactquery, SiMaterialformkdocs, SiShadcnui } from "react-icons/si";
+import { TbApi, TbBrandReactNative } from "react-icons/tb";
+import { MdOutlineDownloading, MdOutlineCallSplit } from "react-icons/md";
+import { VscVscode } from "react-icons/vsc";
 
 function MoreSkills() {
-    const skillsFrontend = [
-        { name: 'React', level: 85, icon: <FaReact className="text-2xl" /> },
-        { name: 'HTML', level: 90, icon: <FaHtml5 className="text-2xl" /> },
-        { name: 'CSS', level: 80, icon: <FaCss3Alt className="text-2xl" /> },
-        { name: 'JavaScript', level: 75, icon: <FaJsSquare className="text-2xl" /> },
-        { name: 'TypeScript', level: 70, icon: <FaJsSquare className="text-2xl" /> },
-    ];
+  const skillCategories = [
+    {
+      title: "Frontend",
+      skills: [
+        { name: 'React', icon: <FaReact className="text-blue-500" /> },
+        { name: 'HTML', icon: <FaHtml5 className="text-orange-600" /> },
+        { name: 'CSS', icon: <FaCss3Alt className="text-blue-600" /> },
+        { name: 'JavaScript', icon: <RiJavascriptFill className="text-yellow-500" /> },
+        { name: 'TypeScript', icon: <BiLogoTypescript className="text-blue-500" /> }
+      ],
+    },
+    {
+      title: "Backend",
+      skills: [
+        { name: 'Node.js', icon: <FaNodeJs className="text-green-500" /> },
+        { name: 'Express.js', icon: <SiExpress className="text-gray-700" /> },
+        { name: 'MongoDB', icon: <SiMongodb className="text-green-700" /> },
+        { name: 'API Creation', icon: <TbApi className="text-purple-500" /> },
+      ],
+    },
+    {
+      title: "Routing, State & Performance",
+      skills: [
+        { name: 'React Router', icon: <SiReactrouter className="text-red-500" /> },
+        { name: 'Redux Toolkit', icon: <SiRedux className="text-pink-500" /> },
+        { name: 'Context API', icon: <TbApi className="text-indigo-500" /> },
+        { name: 'Lazy Loading', icon: <MdOutlineDownloading className="text-blue-500" /> },
+        { name: 'Code Splitting', icon: <MdOutlineCallSplit className="text-orange-500" /> },
+      ],
+    },
+    {
+      title: "Mobile Development",
+      skills: [
+        { name: 'React Native', icon: <TbBrandReactNative className="text-blue-400" /> },
+      ],
+    },
+    {
+      title: "Version Control & Tools",
+      skills: [
+        { name: 'Git', icon: <FaGit className="text-red-600" /> },
+        { name: 'GitHub', icon: <FaGithub className="text-gray-800" /> },
+        { name: 'GitLab', icon: <FaGitlab className="text-orange-600" /> },
+        { name: 'VS Code', icon: <VscVscode className="text-blue-600" /> },
+        { name: 'Postman', icon: <SiPostman className="text-orange-500" /> },
+      ],
+    },
+    {
+      title: "API Integration",
+      skills: [
+        { name: 'Axios', icon: <SiAxios className="text-teal-500" /> },
+        { name: 'Fetch', icon: <SiReactrouter className="text-red-500" /> },
+        { name: 'React Query', icon: <SiReactquery className="text-orange-500" /> },
+        { name: 'REST APIs', icon: <TbApi className="text-purple-600" /> },
+      ],
+    },
+    {
+      title: "UI & Styling",
+      skills: [
+        { name: 'HTML5, CSS3 & SCSS', icon: <FaHtml5 className="text-orange-600" /> },
+        { name: 'Material UI', icon: <SiMaterialformkdocs className="text-blue-800" /> },
+        { name: 'Bootstrap', icon: <FaBootstrap className="text-purple-600" /> },
+        { name: 'Tailwind', icon: <RiTailwindCssFill className="text-cyan-500" /> },
+        { name: 'Shadcn', icon: <SiShadcnui className="text-indigo-700" /> },
+      ],
+    },
+  ];
 
-    const skillsBackend = [
-        { name: 'Node.js', level: 80, icon: <FaNodeJs className="text-2xl" /> },
-        { name: 'Express.js', level: 75, icon: <FaNodeJs className="text-2xl" /> },
-        { name: 'MongoDB', level: 70, icon: <FaDatabase className="text-2xl" /> },
-        { name: 'GraphQL', level: 60, icon: <FaDatabase className="text-2xl" /> },
-        { name: 'API Development', level: 85, icon: <FaNodeJs className="text-2xl" /> },
-    ];
-
-    const getProgressBarColor = (level) => {
-        if (level >= 80) return 'bg-green-500';  // High skill level
-        if (level >= 60) return 'bg-yellow-500'; // Medium skill level
-        return 'bg-red-500'; // Low skill level
-    };
-
-    const renderSkills = (skills) => {
-        return skills.map((skill) => (
-            <div key={skill.name} className="mb-6">
-                <div className="flex justify-between items-center text-sm mb-2">
-                    <div className="flex items-center">
-                        {skill.icon}
-                        <span className="ml-2">{skill.name}</span>
-                    </div>
-                    <span>{skill.level}%</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-3">
-                    <div
-                        className={`h-3 rounded-full ${getProgressBarColor(skill.level)} transition-all duration-500`}
-                        style={{ width: `${skill.level}%` }}
-                    />
-                </div>
-            </div>
-        ));
-    };
-
-    return (
-        <div className=" mt-20 items-center">
-        <h2 className="text-3xl font-extrabold mb-4 text-gray-900 dark:text-white mb-10 tracking-tight">
-          Skills
-        </h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-            {/* Frontend Skill Card */}
-        
-     
-            <Card className="shadow-lg bg-gradient-to-r from-blue-100 to-blue-300">
-                <CardHeader>
-                    <CardTitle className="text-xl font-semibold text-blue-800">Frontend</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    {renderSkills(skillsFrontend)}
-                </CardContent>
-            </Card>
-
-            {/* Backend Skill Card */}
-            <Card className="shadow-lg bg-gradient-to-r from-green-100 to-green-300">
-                <CardHeader>
-                    <CardTitle className="text-xl font-semibold text-green-800">Backend</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    {renderSkills(skillsBackend)}
-                </CardContent>
-            </Card>
-            <Card className="shadow-lg bg-gradient-to-r from-blue-100 to-blue-300">
-                <CardHeader>
-                    <CardTitle className="text-xl font-semibold text-blue-800">Frontend</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    {renderSkills(skillsFrontend)}
-                </CardContent>
-            </Card>
-
-            {/* Backend Skill Card */}
-            <Card className="shadow-lg bg-gradient-to-r from-green-100 to-green-300">
-                <CardHeader>
-                    <CardTitle className="text-xl font-semibold text-green-800">Backend</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    {renderSkills(skillsBackend)}
-                </CardContent>
-            </Card>
+  const renderSkills = (skills) => (
+    skills.map((skill) => (
+      <div key={skill.name} className="mb-6 flex items-center">
+        <div className="text-xl mr-4">
+          {skill.icon}
         </div>
+        <div className="text-sm">
+          <span>{skill.name}</span>
         </div>
-        
-    );
+      </div>
+    ))
+  );
+
+  return (
+    <div className="mt-20">
+      <h2 className="text-3xl font-extrabold mb-10 tracking-tight text-gray-900 dark:text-white text-center">
+        Skills
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-7 gap-6 mt-10">
+        {skillCategories.map((category) => (
+          <Card key={category.title} className="shadow-lg bg-white dark:bg-gray-800 p-4 rounded-lg transition-transform transform hover:scale-105">
+            <CardHeader>
+              <CardTitle className="text-xl font-semibold text-gray-800 dark:text-white">
+                {category.title}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              {renderSkills(category.skills)}
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default MoreSkills;
