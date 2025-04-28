@@ -31,7 +31,7 @@ const skills = [
   
   export default function Skill() {
     return (
-      <div className="flex flex-col justify-center mt-20 items-center">
+      <div className="flex flex-col justify-center mt-20 items-center p-6">
         <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white font-extrabold text-gray-900 dark:text-white mb-10">Technical Skills</h2>
   
         <div className="flex overflow-x-auto scrollbar-hide gap-6 pb-6 items-center w-full px-4 align-center">

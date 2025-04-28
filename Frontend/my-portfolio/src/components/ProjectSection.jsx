@@ -9,8 +9,6 @@ import karan from "../assets/karan.png";
 import lakhani from "../assets/trustlogo.png";
 
 
-
-
 const projects = [
   {
     title: "Transport 360",
@@ -70,8 +68,8 @@ const projects = [
 
 function ProjectSection() {
   return (
-    <div className="flex flex-col justify-center mt-20 items-center">
-      <h2 className="text-3xl font-extrabold mb-4 text-gray-900 dark:text-white mb-10 tracking-tight">
+    <div className="flex flex-col justify-center mt-20 items-center p-6">
+      <h2 className="text-3xl font-extrabold mb-4 text-gray-900 dark:text-white mb-10 tracking-tight ">
         Projects
       </h2>
 

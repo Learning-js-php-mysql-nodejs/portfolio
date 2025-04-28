@@ -1,12 +1,13 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaGit, FaGithub, FaGitlab, FaBootstrap } from "react-icons/fa";
-import { RiJavascriptFill, RiTailwindCssFill } from "react-icons/ri";
-import { BiLogoTypescript } from "react-icons/bi";
+import { FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaGitAlt, FaGithub, FaGitlab, FaBootstrap } from "react-icons/fa";
+import { RiJavascriptFill, RiTailwindCssFill,RiGooglePlayLine } from "react-icons/ri";
+import { BiLogoTypescript,BiSolidNavigation } from "react-icons/bi";
 import { SiExpress, SiMongodb, SiReactrouter, SiRedux, SiPostman, SiAxios, SiReactquery, SiMaterialformkdocs, SiShadcnui } from "react-icons/si";
 import { TbApi, TbBrandReactNative } from "react-icons/tb";
-import { MdOutlineDownloading, MdOutlineCallSplit } from "react-icons/md";
+import { MdOutlineDownloading, MdOutlineCallSplit ,MdFeaturedPlayList} from "react-icons/md";
 import { VscVscode } from "react-icons/vsc";
+import { IoLogoAndroid } from "react-icons/io";
 
 function MoreSkills() {
   const skillCategories = [
@@ -43,13 +44,17 @@ function MoreSkills() {
       title: "Mobile Development",
       skills: [
         { name: 'React Native', icon: <TbBrandReactNative className="text-blue-400" /> },
+        { name: 'Navigation', icon: <BiSolidNavigation className="text-green-400" /> },
+        { name: 'Native Feature', icon: <MdFeaturedPlayList className="text-orange-400" /> },
+        { name: 'Android / iOS', icon: <IoLogoAndroid className="text-green-400" /> },
+        { name: 'App Store / Google Play', icon: <RiGooglePlayLine className="text-red-400" /> },
       ],
     },
     {
       title: "Version Control & Tools",
       skills: [
-        { name: 'Git', icon: <FaGit className="text-red-600" /> },
-        { name: 'GitHub', icon: <FaGithub className="text-gray-800" /> },
+        { name: 'Git', icon: <FaGitAlt className="text-red-600" /> },
+        { name: 'GitHub', icon: <FaGithub className="text-black-800" /> },
         { name: 'GitLab', icon: <FaGitlab className="text-orange-600" /> },
         { name: 'VS Code', icon: <VscVscode className="text-blue-600" /> },
         { name: 'Postman', icon: <SiPostman className="text-orange-500" /> },
@@ -90,7 +95,7 @@ function MoreSkills() {
   );
 
   return (
-    <div className="mt-20">
+    <div className="mt-20 p-6">
       <h2 className="text-3xl font-extrabold mb-10 tracking-tight text-gray-900 dark:text-white text-center">
         Skills
       </h2>

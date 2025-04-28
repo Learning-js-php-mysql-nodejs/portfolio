@@ -2,7 +2,7 @@ import React from 'react'
 
 const Description = () => {
   return (
-    <div className="grid grid-cols-1 justify-center mb-8 mt-20">
+    <div className="grid grid-cols-1 justify-center mb-8 mt-20 p-6">
     <div className="col-span-1 w-full max-w-8xl mx-auto h-auto bg-gray-100 dark:bg-gray-700 p-8 rounded-lg flex flex-col  text-center">
         <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white mb-4">
             Work Experience
