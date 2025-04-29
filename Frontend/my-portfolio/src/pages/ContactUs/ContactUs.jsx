@@ -1,11 +1,90 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Mail, Phone, Github, Gitlab, Linkedin, School, Building, User, MessageSquare } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Loader2 } from "lucide-react"
+import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 
 function ContactUs() {
+
+  const form = useRef(); // ✅ Ref for the form
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = "Required.";
+    if (!formData.email.trim()) {
+      newErrors.email = "Required.";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email is invalid.";
+    }
+    if (!formData.message.trim()) newErrors.message = "Required.";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+
+    setErrors((prevErrors) => {
+      const updatedErrors = { ...prevErrors };
+      if (value.trim()) {
+        delete updatedErrors[id];
+        if (id === "email" && !/\S+@\S+\.\S+/.test(value)) {
+          updatedErrors.email = "Email is invalid.";
+        }
+      }
+      return updatedErrors;
+    });
+  };
+
+  const handleSubmit = (e) => {
+
+    e.preventDefault();
+    if (validate()) {
+      setLoading(true)
+      emailjs
+        .sendForm(
+          'service_5k17kwq', // Replace with your EmailJS service ID
+          'template_vohkyhj', // Replace with your EmailJS template ID
+          form.current,
+          'S7c8qjVpVT4YEgfxd' // Replace with your EmailJS public key
+        )
+        .then(
+          (result) => {
+
+
+            setFormData({ name: '', email: '', message: '' });
+            setLoading(false)
+            toast.success(`Send message Succesfully`)
+
+          },
+          (error) => {
+            setLoading(false)
+            toast.success(`Failed to send message`)
+
+          }
+        );
+    }
+  };
+
+
   return (
     <div className="text-gray-900 dark:text-white px-4 py-10  dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 h-full overflow-hidden">
 
@@ -44,36 +123,54 @@ function ContactUs() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <form className="grid grid-cols-1 gap-8 mt-6">
+              <form ref={form} // ✅ Ref added here
+                onSubmit={handleSubmit} className="grid grid-cols-1 gap-8 mt-6">
                 <div className="flex items-center gap-4">
                   <User className="text-indigo-500" />
                   <Input
                     type="text"
+                    id="name"
+                    name="name" // ✅ Required for EmailJS
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="Your Name"
                     className="focus:ring-2 focus:ring-indigo-400 transition-all"
                   />
+                  {errors.name && <p className="text-red-500 text-sm text-start">{errors.name}</p>}
                 </div>
                 <div className="flex items-center gap-4">
                   <Mail className="text-indigo-500" />
                   <Input
                     type="email"
-                    placeholder="Your Email"
+                    id="email"
+                    name="email" // ✅ Required for EmailJS
+placeholder="Your Email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="focus:ring-2 focus:ring-indigo-400 transition-all"
                   />
+                  {errors.email && <p className="text-red-500 text-sm text-start">{errors.email}</p>}
                 </div>
                 <div className="flex items-start gap-4">
                   <MessageSquare className="text-indigo-500 mt-2" />
                   <Textarea
+                    id="message"
+                    name="message" // ✅ Required for EmailJS
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="Your Message"
                     rows={6}
                     className="focus:ring-2 focus:ring-indigo-400 transition-all"
                   />
+                  {errors.message && <p className="text-red-500 text-sm text-start">{errors.message}</p>}
                 </div>
                 <Button
                   type="submit"
+                  disabled={loading}
                   className="w-full bg-indigo-600 hover:bg-indigo-700 text-white text-lg font-semibold rounded-lg py-3 transition-transform hover:scale-105 duration-300"
                 >
-                  Send Message
+                  {loading && <Loader2 className="animate-spin" />}
+                  {loading ? "Please wait" : "Send"}
                 </Button>
               </form>
             </CardContent>

@@ -10,7 +10,24 @@ import lakhani from "../assets/trustlogo.png";
 import transport1 from "../assets/transport1.png";
 import transport2 from "../assets/transport2.png";
 import transport3 from "../assets/transport3.png";
+import dhartidhorari1 from "../assets/dhartidhorari1.png";
+import dhartidhorari2 from "../assets/dhartidhorari2.png";
+import dhartidhorari3 from "../assets/dhartidhorari3.png";
+import dhartidhorariapp1 from "../assets/dhartidhorariapp1.png";
+import dhartidhorariapp2 from "../assets/dhartidhorariapp2.png";
+import electioneasy from "../assets/electioneasy.png";
+import agreementPaper from "../assets/agreementPaper.png";
+import agreementPaper2 from "../assets/agreementPaper2.png";
+import agreementPaper1 from "../assets/agreementPaper1.png";
+import getai from "../assets/getai.png";
+import getai2 from "../assets/getai2.png";
+import getai1 from "../assets/getai1.png";
 import { Button } from './ui/button';
+import betlagao1 from "../assets/betlagao1.png";
+import betlagao2 from "../assets/betlagao2.png";
+import betlagao3 from "../assets/betlagao3.png";
+import betlagao4 from "../assets/betlagao4.png";
+import betlagao5 from "../assets/betlagao5.png";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const projects = [
@@ -21,13 +38,16 @@ const projects = [
         techStack: "React, Redux Toolkit, Html, css, Node.js",
         description: "A modern logistics platform to streamline transportation management.",
         detailedPoints: [
-            "Developed a modern logistics platform to streamline transportation management, improve operational efficiency, and reduce costs through UX-first development.",
-            "Built a trip management system capable of handling multiple LRs (Lorry Receipts), live location tracking, and automated trip reporting.",
-            "Led the design and implementation of a bid management system for trip bidding by drivers and transport owners.",
-            "Integrated Google Maps API for real-time vehicle tracking and intelligent route planning.",
-            "Engineered a scalable frontend using React.js, with custom hooks, reusable components, and a clean import/export architecture.",
-            "Implemented lazy loading, code-splitting, React.memo, and Context API for global state and rendering optimization.",
-            "Managed complex UI flows with multiple modals, scroll-based dropdowns, dynamic options, and minimized redundant API calls."
+            " Built a full-stack logistics web app using React.js (frontend) and Node.js (backend)",
+            "Implemented trip management system with support for multiple LR selection and multi-location routing",
+            "Developed a dynamic bid system to enable competitive rate selection for optimal logistics pricing",
+            "Used lazy loading and caching to improve performance and reduce load times",
+            "Utilized Redux Toolkit and Context API for scalable and efficient state management",
+            "Created custom and reusable components, including inputs, dropdowns, and modals, to enhance development speed and maintainability",
+            "Developed infinite scroll dropdowns with real-time API-based search and an add button for new entries",
+            "Leveraged React Hooks and custom hooks for clean, modular business logic",
+            "Integrated Google Maps for real-time location tracking and trip route visualization",
+            "Focused on a responsive, user-friendly UI with robust error handling across all modules"
         ],
         demoLink: "https://transport360.urja360.com",
         githubLink: "#",
@@ -37,89 +57,93 @@ const projects = [
             transport2,
             transport3
         ]
-        // imageUrls: [
-        //     "../assets/transport1.png",
-        //     "../assets/transport2.png",
 
-        //   ]
     },
     {
         title: "Dharti Dhora Ri ",
-        projectType: "Transport Management System",
-        timeline: "Aug 2022 - Present",
-        techStack: "React, Tailwind CSS, Shadcn UI",
-        description: "A modern logistics platform to streamline transportation management.",
+        projectType: "Event And Hotal Management System",
+        timeline: "Jan 2025 - Present",
+        techStack: "React, Redux Toolkit, Html, css, Pythan",
+        description: "Hotel & Event Management System – Web App.",
         detailedPoints: [
-            "Built a Trip Management System handling multiple Lorry Receipts (LRs), live tracking, automated trip reporting.",
-            "Led Bid Management System design for trip bidding by drivers and owners.",
-            "Integrated Google Maps API for real-time vehicle tracking and smart route planning.",
-            "Engineered scalable frontend using custom hooks, reusable components, and clean import/export structure.",
-            "Optimized app using lazy loading, code-splitting, React.memo, and Context API.",
-            "Handled complex UI flows: modals, scroll dropdowns, dynamic options, minimized API redundancy."
+            "Developed a mobile application using React Native for seamless hotel and event management.",
+            "Implemented features like guest room booking, check-in/check-out, and digital key allotment.",
+            "ntegrated WhatsApp-based verification for secure and user-friendly access.",
+            "Designed and built reusable components and custom hooks to streamline functionality and maintain clean code.",
+            "Applied a custom theme color system for brand consistency and UI personalization.",
+            "Created dynamic custom modals for user interactions and confirmations.",
+
         ],
-        demoLink: "https://transport360.urja360.com",
-        githubLink: "https://github.com/example",
+        demoLink: "https://cms.dhartidhorari.com/",
+        githubLink: "https://github.com/virendrauikey",
         image: dharti,
-        imageUrls: []
+        imageUrls: [dhartidhorari1, dhartidhorari2, dhartidhorari3]
     }, {
         title: "Dharti Dhora Ri App",
-        projectType: "Transport Management System",
-        timeline: "Aug 2022 - Present",
-        techStack: "React, Tailwind CSS, Shadcn UI",
-        description: "A modern logistics platform to streamline transportation management.",
+        projectType: "Event And Hotal Management App",
+        timeline: "Jan 2025 - Present",
+        techStack: "React Native, Redux Toolkit, Html, css, Pythan",
+        description: "Hotel & Event Management System – Mobile App.",
         detailedPoints: [
-            "Built a Trip Management System handling multiple Lorry Receipts (LRs), live tracking, automated trip reporting.",
-            "Led Bid Management System design for trip bidding by drivers and owners.",
-            "Integrated Google Maps API for real-time vehicle tracking and smart route planning.",
-            "Engineered scalable frontend using custom hooks, reusable components, and clean import/export structure.",
-            "Optimized app using lazy loading, code-splitting, React.memo, and Context API.",
-            "Handled complex UI flows: modals, scroll dropdowns, dynamic options, minimized API redundancy."
+            "Developed a mobile application using React Native for seamless hotel and event management.",
+            "Implemented features like guest room booking, check-in/check-out, and digital key allotment.",
+            "ntegrated WhatsApp-based verification for secure and user-friendly access.",
+            "Designed and built reusable components and custom hooks to streamline functionality and maintain clean code.",
+            "Applied a custom theme color system for brand consistency and UI personalization.",
+            "Created dynamic custom modals for user interactions and confirmations.",
+            "Ensured a responsive, smooth, and intuitive user experience across Android and iOS devices"
         ],
-        demoLink: "https://transport360.urja360.com",
-        githubLink: "https://github.com/example",
+        demoLink: "#",
+        githubLink: "https://github.com/virendrauikey",
         image: dharti,
-        imageUrls: []
+        imageUrls: [dhartidhorariapp1, dhartidhorariapp2]
     }, {
         title: "Election Easy",
-        projectType: "Transport Management System",
-        timeline: "Aug 2022 - Present",
-        techStack: "React, Tailwind CSS, Shadcn UI",
-        description: "A modern logistics platform to streamline transportation management.",
+        projectType: "Election Easy – Voter Management Web Application",
+        timeline: "Mar 2024 - Nov 2024",
+        techStack: "React, Redux toolkit,Pythan ,Html ,Css",
+        description: "Election Easy – Voter Management Web Application",
         detailedPoints: [
-            "Built a Trip Management System handling multiple Lorry Receipts (LRs), live tracking, automated trip reporting.",
-            "Led Bid Management System design for trip bidding by drivers and owners.",
-            "Integrated Google Maps API for real-time vehicle tracking and smart route planning.",
-            "Engineered scalable frontend using custom hooks, reusable components, and clean import/export structure.",
-            "Optimized app using lazy loading, code-splitting, React.memo, and Context API.",
-            "Handled complex UI flows: modals, scroll dropdowns, dynamic options, minimized API redundancy."
+            "Built a scalable voter management platform for local political parties using React.js",
+            "Managed large-scale voter data with detailed assembly-wise and booth-wise segmentation",
+            "Integrated voter relationship tracking for personalized outreach and engagement",
+            "Utilized React Query for efficient REST API integration, caching, and background updates.",
+            "Applied Context API for shared state management across components.",
+            "Created reusable UI components (inputs, tables, filters) for consistent design and development speed.",
+            "Developed custom hooks to abstract logic and promote code reusability",
+            "Designed an intuitive UI for managing voter lists, relationships, and real-time updates",
+            "Ensured responsive performance and usability in field operations with large datasets"
         ],
-        demoLink: "https://transport360.urja360.com",
-        githubLink: "https://github.com/example",
+        demoLink: "https://electioneasy.in",
+        githubLink: "https://github.com/virendrauikey",
         image: election,
-        imageUrls: []
+        imageUrls: [electioneasy]
     }, {
         title: "Karan Group",
         projectType: "Transport Management System",
-        timeline: "Aug 2022 - Present",
-        techStack: "React, Tailwind CSS, Shadcn UI",
-        description: "A modern logistics platform to streamline transportation management.",
+        timeline: "Jan 2023 - Jan 2024",
+        techStack: "React, Redux toolkit,Pythan ,Html ,Css",
+        description: "Karan Group eLogistic Web Application",
         detailedPoints: [
-            "Built a Trip Management System handling multiple Lorry Receipts (LRs), live tracking, automated trip reporting.",
-            "Led Bid Management System design for trip bidding by drivers and owners.",
-            "Integrated Google Maps API for real-time vehicle tracking and smart route planning.",
-            "Engineered scalable frontend using custom hooks, reusable components, and clean import/export structure.",
-            "Optimized app using lazy loading, code-splitting, React.memo, and Context API.",
-            "Handled complex UI flows: modals, scroll dropdowns, dynamic options, minimized API redundancy."
+            "Developed a scalable logistics management system using React.js",
+            "Implemented order and fleet management modules to streamline operations.",
+            "Integrated Google Maps API for real-time fleet tracking and location visualization.",
+            "Utilized React Query for efficient data fetching, lazy loading, and caching.",
+            "Applied Redux for centralized state management across the application.",
+            "Built reusable and customizable UI components for inputs, dropdowns, etc.",
+            "Created custom React hooks to encapsulate and manage business logic",
+            "Enhanced performance using lazy loading and component-level optimization",
+            "Ensured robust error handling and a clean user experience throughout"
         ],
-        demoLink: "https://transport360.urja360.com",
-        githubLink: "https://github.com/example",
+        demoLink: "https://app.karanfms.com/login",
+        githubLink: "https://github.com/virendrauikey",
         image: karan,
         imageUrls: []
     }, {
         title: "Lakhani Charitable Trust",
         projectType: "Transport Management System",
-        timeline: "Aug 2022 - Present",
-        techStack: "React, Tailwind CSS, Shadcn UI",
+        timeline: "April 2025 - Present",
+        techStack: "React, Redux toolkit,Pythan ,Html ,Css",
         description: "A modern logistics platform to streamline transportation management.",
         detailedPoints: [
             "Built a Trip Management System handling multiple Lorry Receipts (LRs), live tracking, automated trip reporting.",
@@ -136,58 +160,56 @@ const projects = [
     }, {
         title: "Agreement Paper",
         projectType: "Transport Management System",
-        timeline: "Aug 2022 - Present",
-        techStack: "React, Tailwind CSS, Shadcn UI",
+        timeline: "Aug 2023 - Aug 2024",
+        techStack: "React, Redux toolkit,Pythan ,Html ,Css",
         description: "A modern logistics platform to streamline transportation management.",
         detailedPoints: [
-            "Built a Trip Management System handling multiple Lorry Receipts (LRs), live tracking, automated trip reporting.",
-            "Led Bid Management System design for trip bidding by drivers and owners.",
-            "Integrated Google Maps API for real-time vehicle tracking and smart route planning.",
-            "Engineered scalable frontend using custom hooks, reusable components, and clean import/export structure.",
-            "Optimized app using lazy loading, code-splitting, React.memo, and Context API.",
-            "Handled complex UI flows: modals, scroll dropdowns, dynamic options, minimized API redundancy."
+            "Developed AgreementPaper, a digital contract management platform enabling seamless online creation, editing, and signing of legal agreements..",
+            "Implemented secure user authentication and role-based access control using JWT and OAuth protocols.",
+            "Designed and integrated dynamic form generation to support customizable legal templates and input validation.",
+            "Enabled real-time document tracking and status updates using WebSockets for improved collaboration and transparency.",
+            "Built responsive, user-friendly UI with React, ensuring optimal user experience across devices.",
+            "Optimized back-end performance using Pythan, reducing API response times by 30%.",
+            "Integrated e-signature workflows and automated audit trails for legally compliant agreement execution."
         ],
-        demoLink: "https://transport360.urja360.com",
+        demoLink: "https://app.agreementpaper.com/",
         githubLink: "https://github.com/example",
         icon: HeartHandshake,
-        imageUrls: []
+        imageUrls: [agreementPaper, agreementPaper2, agreementPaper1]
     }, {
         title: "BetLagao",
         projectType: "Transport Management System",
-        timeline: "Aug 2022 - Present",
-        techStack: "React, Tailwind CSS, Shadcn UI",
-        description: "A modern logistics platform to streamline transportation management.",
+        timeline: "Aug 2022 - Dec 2023",
+        techStack: "React, Redux ,Node.js ,Html ,Css",
+        description: "Bet Lagao – Fantasy Gaming Web Application",
         detailedPoints: [
-            "Developed a modern logistics platform to streamline transportation management,improve operational efficiency, and reduce costs through UX-first development.",
-            "Led Bid Management System design for trip bidding by drivers and owners.",
-            "Integrated Google Maps API for real-time vehicle tracking and smart route planning.",
-            "Engineered scalable frontend using custom hooks, reusable components, and clean import/export structure.",
-            "Optimized app using lazy loading, code-splitting, React.memo, and Context API.",
-            "Handled complex UI flows: modals, scroll dropdowns, dynamic options, minimized API redundancy."
+            "Contributed to a fantasy web application for games by fixing critical bugs and enhancing stability",
+            "Worked on both frontend (React.js) and backend (Node.js) for full-stack improvements",
+            " Developed and optimized reusable UI components for consistent user experience",
+            " Integrated real-time game score updates for an engaging and dynamic interface",
+            "Focused on improving performance, code quality, and overall user interactivity",
+
         ],
-        demoLink: "https://transport360.urja360.com",
-        githubLink: "https://github.com/example",
+        demoLink: "https://user.betlagao.com/",
+        githubLink: "https://github.com/virendrauikey",
         icon: Users,
-        imageUrls: []
+        imageUrls: [betlagao1, betlagao2, betlagao3, betlagao4, betlagao5]
     },
     {
         title: "GetAi",
-        projectType: "Transport Management System",
-        timeline: "Aug 2022 - Present",
-        techStack: "React, Tailwind CSS, Shadcn UI",
-        description: "A modern logistics platform to streamline transportation management.",
-        detailedPoints: [
-            "Built a Trip Management System handling multiple Lorry Receipts (LRs), live tracking, automated trip reporting.",
-            "Led Bid Management System design for trip bidding by drivers and owners.",
-            "Integrated Google Maps API for real-time vehicle tracking and smart route planning.",
-            "Engineered scalable frontend using custom hooks, reusable components, and clean import/export structure.",
-            "Optimized app using lazy loading, code-splitting, React.memo, and Context API.",
-            "Handled complex UI flows: modals, scroll dropdowns, dynamic options, minimized API redundancy."
+        projectType: "Social media with Ai",
+        timeline: "Dec 2023 - april 2024",
+        techStack: "React, Redux toolkit,Pythan ,Html ,Css",
+        description: "a platform dedicated to providing innovative AI tools and resources designed to enhance productivity",
+        detailedPoints: ["a platform dedicated to providing innovative AI tools and resources designed to enhance productivity",
+            "streamline tasks, and bring smarter solutions to both personal and professional challenges.",
+            "Whether you're looking for automation, insights, or cutting-edge AI applications",
+            "this platform could be your go-to resource for leveraging the power of AI."
         ],
-        demoLink: "https://transport360.urja360.com",
+        demoLink: "https://getai.life/",
         githubLink: "https://github.com/example",
         icon: Bot,
-        imageUrls: []
+        imageUrls: [getai, getai1, getai2]
     },
 
 ];
@@ -195,7 +217,18 @@ const projects = [
 function ProjectList() {
 
     const [selectedImage, setSelectedImage] = useState(null);
-   
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = (imgUrl) => {
+        setSelectedImage(imgUrl);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setSelectedImage(null);
+        setIsModalOpen(false);
+    };
+
     return (
         <div className="flex flex-col justify-center items-center min-h-screen mt-0 w-full p-0">
             <div className='flex justify-center items-center h-24 bg-white dark:bg-gray-800 shadow  sticky top-16 z-50 w-full transition-colors mb-5 border-t-4 border-grey-900 '>
@@ -264,34 +297,41 @@ function ProjectList() {
                                     <div className="p-4 rounded-md bg-gradient-to-r from-yellow-50 to-yellow-100 dark:from-yellow-900 dark:to-yellow-800 shadow-md">
                                         <h4 className="text-lg font-semibold text-yellow-700 dark:text-yellow-300 mb-4">🖼️ Project Demo</h4>
 
-                                        {project?.imageUrls?.length > 0 && <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                                            {console.log(project)}
-                                            {project.imageUrls.map((imgUrl, idx) => (
-                                                <Dialog key={idx}>
-                                                    <DialogTrigger asChild>
-                                                        <div
-                                                            className="cursor-pointer rounded-lg overflow-hidden shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300"
-                                                            onClick={() => setSelectedImage(imgUrl)}
-                                                        >
-                                                            <img
-                                                                src={imgUrl}
-                                                                alt={`Project Image ${idx + 1}`}
-                                                                className="w-full h-48 object-cover"
-                                                            />
-                                                        </div>
-                                                    </DialogTrigger>
-                                                    <DialogContent className="max-w-4xl p-0 overflow-hidden " >
-                                                        {selectedImage && (
-                                                            <img
-                                                                src={selectedImage}
-                                                                alt="Full View"
-                                                                className="w-full h-auto max-h-[90vh] object-contain rounded-md"
-                                                            />
-                                                        )}
-                                                    </DialogContent>
-                                                </Dialog>
-                                            ))}
-                                        </div>}
+                                        {project?.imageUrls?.length > 0 && (
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                                                {project.imageUrls.map((imgUrl, idx) => (
+                                                    <div
+                                                        key={idx}
+                                                        className="cursor-pointer rounded-lg overflow-hidden shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300"
+                                                        onClick={() => openModal(imgUrl)}
+                                                    >
+                                                        <img
+                                                            src={imgUrl}
+                                                            alt={`Project Image ${idx + 1}`}
+                                                            className="w-full h-48 object-cover"
+                                                        />
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+
+                                        {/* Single Dialog */}
+                                        {/* Custom Fullscreen Modal */}
+                                        {isModalOpen && (
+                                            <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                                                <button
+                                                    onClick={closeModal}
+                                                    className="absolute top-5 right-5 text-white text-3xl font-bold"
+                                                >
+                                                    &times;
+                                                </button>
+                                                <img
+                                                    src={selectedImage}
+                                                    alt="Full View"
+                                                    className="max-w-400 max-h-full object-contain rounded-md"
+                                                />
+                                            </div>
+                                        )}
                                     </div>
 
                                     {/* Buttons */}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from './ui/button';
 import { Truck, ShoppingCart, Edit, Vote, Building2, HeartHandshake, FileText, Users, Bot } from 'lucide-react';
@@ -7,66 +7,68 @@ import transport from "../assets/transport.png";
 import election from "../assets/election.png";
 import karan from "../assets/karan.png";
 import lakhani from "../assets/trustlogo.png";
+import { UserContext } from '@/context';
 
 
 const projects = [
   {
     title: "Transport 360",
-    description: "A responsive portfolio website built with React, Tailwind CSS, and Shadcn UI components.",
+    description: "Transport 360 – eLogistic Web Application",
     color: "bg-gradient-to-r from-blue-500 to-indigo-600",
     image: transport
   },
   {
     title: "Dharti Dhora Ri",
-    description: "A full-stack e-commerce application with user authentication, cart management, and payment integration.",
+    description: "Hotel & Event Management System – Web App",
     color: "bg-gradient-to-r from-green-400 to-teal-500",
     image: dharti
   },
   {
     title: "Dharti Dhorari App",
-    description: "A blogging platform where users can create, edit, and delete posts, with a rich text editor.",
+    description: "Hotel & Event Management System – Mobile App",
     color: "bg-gradient-to-r from-pink-500 to-rose-500",
     image: dharti
   },
   {
     title: "Election Easy",
-    description: "An election management app to simplify voter registration and candidate profiling.",
+    description: "Election Easy – Voter Management Web Application",
     color: "bg-gradient-to-r from-yellow-400 to-orange-500",
     image: election
   },
   {
     title: "Karan Group",
-    description: "A corporate website showcasing projects, team, and services for the Karan Group.",
+    description: "Karan Group eLogistic Web Application",
     color: "bg-gradient-to-r from-purple-500 to-fuchsia-600",
     image: karan
   },
   {
     title: "Lakhani Charitable Trust",
-    description: "A donation management platform with donor dashboards and event management features.",
+    description: "A donation management platform with donor dashboards.",
     color: "bg-gradient-to-r from-cyan-500 to-blue-500",
     image: lakhani
   },
   {
     title: "Agreement Paper",
-    description: "A legal document signing platform with online verification and templates.",
+    description: "A digital contract management platform enabling seamless online creation",
     color: "bg-gradient-to-r from-red-500 to-pink-600",
     icon: FileText
   },
   {
     title: "Batlagao",
-    description: "A social networking platform focused on positive discussions and topic-based communities.",
+    description: "Bet Lagao – Fantasy Gaming Web Application",
     color: "bg-gradient-to-r from-lime-400 to-green-500",
     icon: Users
   },
   {
     title: "Get AI",
-    description: "An AI tools marketplace offering services like text generation, image editing, and chatbots.",
+    description: "a platform dedicated to providing innovative AI tools and resources designed to enhance productivity",
     color: "bg-gradient-to-r from-emerald-400 to-teal-500",
     icon: Bot
   }
 ];
 
 function ProjectSection() {
+  const { toggleDarkMode, activeTab, setActiveTab, isDarkMode } = useContext(UserContext);
   return (
     <div className="flex flex-col justify-center mt-20 items-center p-6">
       <h2 className="text-3xl font-extrabold mb-4 text-gray-900 dark:text-white mb-10 tracking-tight ">
@@ -97,7 +99,8 @@ function ProjectSection() {
                 <Button
                   variant="default"
                   size="sm"
-                  className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-pink-500 hover:to-yellow-500 transition-all duration-300"
+                  className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-pink-500 hover:to-yellow-500 transition-all duration-300 cursor-pointer"
+                  onClick={() => setActiveTab("Projects")}
                 >
                   View Project
                 </Button>
