@@ -55,7 +55,7 @@ function Dashboard() {
             </main>
 
             {/* Footer */}
-            <footer className="bg-white dark:bg-gray-800 shadow-inner p-4 text-center text-sm text-gray-500 dark:text-gray-400">
+            <footer className="bg-white dark:bg-gray-800 shadow-inner p-4 text-center text-sm text-gray-500 dark:text-gray-400 sticky bottom-0 z-50">
                 © {new Date().getFullYear()} Portfolio. All rights reserved.
             </footer>
         </div>
